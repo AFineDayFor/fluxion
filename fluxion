@@ -512,6 +512,18 @@ DIALOG_WEB_LENGTH_MIN_HE="הסיסמה חייבת להכיל יותר מ{0} תו
 DIALOG_WEB_LENGTH_MAX_HE="הסיסמה חייבת להכיל פחות מ{0} תוים!"
 DIALOG_WEB_DIR_ENG="rtl"
 
+#FR
+DIALOG_WEB_INFO_FR="Pour des raisons de sécurité, entrez la clé WPA pour accéder à Internet."
+DIALOG_WEB_INPUT_FR="Entrez votre mot de passe WPA:"
+DIALOG_WEB_SUBMIT_FR="Soumettre"
+DIALOG_WEB_ERROR_FR="Erreur: Le mot de passe saisi n'est pas correct!"
+DIALOG_WEB_OK_FR="Votre connexion sera restaurée dans quelques instants."
+DIALOG_WEB_BACK_FR="Arrière"
+DIALOG_WEB_ERROR_MSG_FR="Ce champ est requis."
+DIALOG_WEB_LENGTH_MIN_FR="Le mot de passe doit comporter plus de {0} caractères!"
+DIALOG_WEB_LENGTH_MAX_EFR="Le mot de passe doit être inférieur à {0} caractères!"
+DIALOG_WEB_DIR_FR="ltr"
+
 # Design
 function top(){
 
@@ -948,6 +960,7 @@ function language {
 		echo -e ""$red"["$yellow"i"$red"]"$transparent" Select your language"
 		echo "                                       "
 		echo -e "      "$red"["$yellow"1"$red"]"$transparent" English          "
+		echo -e "      "$red"["$yellow"1"$red"]"$transparent" French         "
 		echo -e "      "$red"["$yellow"2"$red"]"$transparent" German      "
 		echo -e "      "$red"["$yellow"3"$red"]"$transparent" Romanian     "
 		echo -e "      "$red"["$yellow"4"$red"]"$transparent" Turkish    "
@@ -1462,6 +1475,58 @@ function greek {
     selection_1="Ενεργοί πελάτες"
     selection_2="Επιλέξτε στόχο. Για σκανάρισμα ξανά, πατήστε το$red r$transparent"
 
+}
+
+function french {
+	header_setinterface="Sélectionner une interface"
+	setinterface_error="Il n'y a pas de cartes sans fil, quit ..."
+
+	# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	header_choosescan="Sélectionner un canal"
+	choosescan_option_1="Tous les canaux "
+	choosescan_option_2="Canal spécifique/Chaînes spécifiques"
+	# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	scanchan_option_1="Un seul canal"
+	scanchan_option_2="Plusieurs canaux"
+	# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	header_scan="WIFI Moniteur"
+	# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	header_scanchan="Cible de balayage"
+	# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	header_askAP="Option d'attaque Sélectionner"
+	askAP_option_1="FakeAP - Hostapd ("$red"Recommended)"
+	askAP_option_2="FakeAP - airbase-ng (Slower connection)"
+	askAP_option_3="WPS-SLAUGHTER - Bruteforce WPS Pin"
+	askAP_option_4="Bruteforce - (Handshake is required)"
+	# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	header_askauth="MÉTHODE DE VÉRIFICATION DU MOT DE PASSE"
+	askauth_option_1="Poignée de main ("$red"Recommended)"
+	askauth_option_2="Wpa_supplicant(Plus d'échecs)"
+	# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	header_deauthforce="Vérification de la poignée de main"
+	deauthforce_option_1="aircrack-ng (Mlle chance)"
+	# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	header_deauthMENU="*Capture Poignée de main*"
+	deauthMENU_option_1="Vérifier la poignée de main"
+	# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	header_webinterface="Sélectionnez votre option"
+	header_ConnectionRESET="Sélectionnez la page de connexion"
+	# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	general_back="Back"
+	general_error_1="Pas_trouvé"
+	general_case_error="Option inconnue. Choisir de nouveau"
+	general_exitmode="Nettoyage et fermeture"
+	general_exitmode_1="Désactivation de l'interface de surveillance"
+	general_exitmode_2="Désactivation de l'interface"
+	general_exitmode_3="Désactivation de la redirection "$gray" des paquets"
+	general_exitmode_4="Nettoyage "$ gray" iptables
+	general_exitmode_5="Restoring "$grey"tput" # Check later.
+	general_exitmode_6="Redémarrage de "$grey"Network-Manager" # Check later
+	general_exitmode_7="Nettoyage effectué avec succès!"
+	general_exitmode_8="Merci d'utiliser fluxion"
+	# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	selection_1="Clients actifs"
+	selection_2="Sélectionnez la cible. Pour rescan cliquez sur$red r$transparent"
 }
 
 # Choose Interface
